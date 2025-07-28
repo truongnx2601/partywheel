@@ -27,8 +27,6 @@ const Wheel = () => {
   useEffect(() => {
     if (isSpinning) {
       document.title = "🌀 Đang quay...";
-    } else if (result) {
-      document.title = `🎯 Kết quả: ${result}`;
     } else {
       document.title = "🎉 Nhơn phẩm số âm 🍻";
     }
