@@ -1,0 +1,30 @@
+.wheel {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  border: 6px solid #facc15;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fffef5;
+}
+
+.segment {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(0deg) skewY(-60deg);
+  background: #fde68a;
+  border-right: 1px solid #fcd34d;
+  border-bottom: 1px solid #fcd34d;
+}
+
+.segment span {
+  font-size: 40px;
+  transform: skewY(60deg) rotate(30deg); /* Đảo ngược lại để icon không bị nghiêng */
+}
