@@ -24,6 +24,16 @@ const Wheel = () => {
   const [result, setResult] = useState("");
   const [shuffledRewards, setShuffledRewards] = useState(rewards);
 
+  useEffect(() => {
+    if (isSpinning) {
+      document.title = "🌀 Đang quay...";
+    } else if (result) {
+      document.title = `🎯 Kết quả: ${result}`;
+    } else {
+      document.title = "🎉 Nhơn phẩm số âm 🍻";
+    }
+  }, [isSpinning, result]);
+
   const shuffleArray = (arr) => {
     const copy = [...arr];
     for (let i = copy.length - 1; i > 0; i--) {
